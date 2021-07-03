@@ -3,37 +3,45 @@
   margin: 0;
   box-sizing: border-box;
 }
+html {
+  font-size: 62.5%;
+}
 
 body {
   background-color: hsl(233, 47%, 7%);
   color: hsl(0, 0%, 100%);
+
+  max-width: 1440px;
+  margin: auto;
 }
 
 .container {
   background-color: hsl(244, 38%, 16%);
 
-  max-width: 1440px;
+  max-width: 1110px;
   margin: 25vh auto;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  border-radius: 1rem;
 }
 
 .card-content {
-  max-width: 800px;
+  width: 50%;
 
-  padding: 0 9rem;
+  padding: 8rem 11rem 7rem 7rem;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-family: Inter, sans-serif;
   font-weight: 700;
 
-  padding-bottom: 2rem;
-
   color: hsl(0, 0%, 100%);
+
+  padding-bottom: 3rem;
 }
 
 span {
@@ -41,97 +49,107 @@ span {
 }
 
 .card-content__paragraph {
-  font-size: 1.2rem;
+  font-size: 1.65rem;
   font-family: Lexend, sans-serif;
 
   color: hsla(0, 0%, 100%, 0.75);
 
-  margin-bottom: 3rem;
+  padding-bottom: 8rem;
 }
 
 .card-content__stats {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-right: 1rem;
 }
 
 .stats-item__heading {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-family: Inter, sans-serif;
   font-weight: 700;
 
-  margin-bottom: 0.3rem;
+  padding-bottom: 0.5rem;
 }
 
 .stats-item__content {
   font-family: Lexend, sans-serif;
-  font-size: 0.8rem;
+  font-size: 1.1rem;
 
   text-transform: uppercase;
 
   color: hsla(0, 0%, 100%, 0.6);
 }
-
-.overlay {
+.image {
+  width: 50%;
   background-color: hsl(277, 64%, 61%);
+
+  border-radius: 0 1rem 1rem 0;
 }
 
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
+
   opacity: 0.35;
+
+  border-radius: 0 1rem 1rem 0;
 }
 
 @media only screen and (max-width: 375px) {
   .container {
-    max-width: 320px;
+    max-width: 330px;
 
     flex-direction: column-reverse;
     justify-content: center;
+    align-items: center;
+  }
+
+  .image {
+    width: auto;
+    height: 50%;
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  img {
+    border-radius: 1rem 1rem 0 0;
   }
 
   .card-content {
-    padding: 0 1rem;
+    width: auto;
+    height: 50%;
+
+    padding: 4.5rem 3.5rem 0 3.5rem;
   }
 
   h1 {
-    font-size: 1.8rem;
+    font-size: 3rem;
 
     text-align: center;
 
-    padding-top: 2rem;
+    padding-bottom: 2.5rem;
   }
 
   .card-content__paragraph {
-    font-size: 1rem;
+    font-size: 1.5rem;
 
     text-align: center;
     line-height: 1.5;
 
-    margin-bottom: 2rem;
+    padding-bottom: 5rem;
   }
 
   .card-content__stats {
     flex-direction: column;
-
-    padding: 0;
-    margin-bottom: 1.5rem;
   }
 
   .stats-item__heading {
-    font-size: 1.4rem;
-
+    font-size: 2rem;
     text-align: center;
-
-    margin-bottom: 0.5rem;
   }
 
   .stats-item__content {
-    font-size: 0.7rem;
-
-    padding-bottom: 1.5rem;
-
     text-align: center;
+
+    padding-bottom: 3.5rem;
   }
 }
